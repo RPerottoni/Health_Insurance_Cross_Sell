@@ -20,7 +20,10 @@ Com a sua solução, o time de vendas espera conseguir priorizar as pessoas com 
 
 Como resultado da sua consultoria, você precisará entregar um relatório contendo algumas análises e respostas às seguintes perguntas:
 
-1.Principais Insights sobre os atributos mais relevantes de clientes interessados em adquirir um seguro de automóvel.</b>
-2.Qual a porcentagem de clientes interessados em adquirir um seguro de automóvel, o time de vendas conseguirá contatar fazendo 20.000 ligações?</b>
-3.E se a capacidade do time de vendas aumentar para 40.000 ligações, qual a porcentagem de clientes interessados em adquirir um seguro de automóvel o time de vendas conseguirá contatar?</b>
-4.Quantas ligações o time de vendas precisa fazer para contatar 80% dos clientes interessados em adquirir um seguro de automóvel?</b>
+1.Principais Insights sobre os atributos mais relevantes de clientes interessados em adquirir um seguro de automóvel.
+
+2.Qual a porcentagem de clientes interessados em adquirir um seguro de automóvel, o time de vendas conseguirá contatar fazendo 20.000 ligações?
+
+3.E se a capacidade do time de vendas aumentar para 40.000 ligações, qual a porcentagem de clientes interessados em adquirir um seguro de automóvel o time de vendas conseguirá contatar?
+
+4.Quantas ligações o time de vendas precisa fazer para contatar 80% dos clientes interessados em adquirir um seguro de automóvel?

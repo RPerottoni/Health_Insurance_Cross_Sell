@@ -57,34 +57,34 @@ My strategy to solve this challenge was:
 # 4. Data Insights
 
 **1. The interest on purchase the vehicle insurance is greater for customers that damaged their vehicle before and doesn't have insurance.**
-    **False, of the customers that damaged their car and doesn't have insurance, only 25% show interest in acquire vehicle insurance.**
+    False, of the customers that damaged their car and doesn't have insurance, only 25% show interest in acquire vehicle insurance.
 
 **2. The interest on purchase the vehicle insurance is greater for woman than men.**
-    **False, only 10% of women show interest in acquire vehicle insurance, whereas 13% of the men show interest on acquire vehicle insurance.**
+   False, only 10% of women show interest in acquire vehicle insurance, whereas 13% of the men show interest on acquire vehicle insurance.
 
 **3. The interest on purchase vehicle insurance is greater for vintage customers ( 7 months or more ).**
-    **False, the period that customers are on the company doensn't show influency on interest in buying vehicle insurance.**
+    False, the period that customers are on the company doensn't show influency on interest in buying vehicle insurance.
 
 **4. The interest on purchase the vehicle insurance is greater for young customers.(Between 18 and 30 years old.)**
-    **False, customers that spend more than 30k yearly show greter interest on purchase vehicle insurance.**
+    False, customers that spend more than 30k yearly show greter interest on purchase vehicle insurance.
 
 **5. The interest on purchase the vehicle insurance is greater for young customers.(Between 18 and 30 years old.)**
-    **False, adults and elderlies show greater interest on buying vehicle insurance.**
+    False, adults and elderlies show greater interest on buying vehicle insurance.
 
 **6. The interest on purchase the vehicle insurance is greater for customers that have driver license.**
-    **True, arround 12% of customers that hold a driving license show interest in buying the vehicle insurance.**
+    True, arround 12% of customers that hold a driving license show interest in buying the vehicle insurance.
 
 **7. The interest on purchase the vehicle insurance is greater for customers that have new cars.**
-    **False, the interest is greater for customers that own an old car.**
+    False, the interest is greater for customers that own an old car.
 
 **8. The interest on purchase the vehicle insurance is greater for customers that have new cars and have damaged their vehicles.**
-    **False, of the customers who damaged their car, the ones that own a old car show greater interest in buying the vehicle insurance (29%), followed by customers that own used cars (27%).**
+    False, of the customers who damaged their car, the ones that own a old car show greater interest in buying the vehicle insurance (29%), followed by customers that own used cars (27%).
 
 **9. The interest on purchase the vehicle insurance is greater for elderly women.**
-    **False, adult women show greater interest in buying the vehicle insurance.**
+    False, adult women show greater interest in buying the vehicle insurance.
 
 **10. The interest on purchase the vehicle insurance is lower for customers that are already insured.**
-    **True, less than 1% of customers already insured show interest on purchase the vehicle insurance.**
+    True, less than 1% of customers already insured show interest on purchase the vehicle insurance.
 
 # 5. Machine Learning Model Applied
 

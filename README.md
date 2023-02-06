@@ -33,8 +33,9 @@ As a result of your consultancy, you will need to deliver a report containing so
 # 2. Business Assumptions.
 
 - Every customer that shows an interest greater than 50% will be classified as interested on purchase vehicle insurance.
-- This new product will cost $2.000,00 for each new customer.
-- This new product will cost $100.00 a call to contact each interested customer.
+-  that 70% of interested customer will convert.
+- This new product costs $2.000,00 for each new customer.
+- Costs are $100,00 to contact each person.
 
 # 3. Solution Strategy
 

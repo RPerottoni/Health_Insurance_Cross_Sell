@@ -1,50 +1,77 @@
 # Health_Insurance_Cross_Sell
 
-#### This project was made by rperottoni.
+#### This project was made by Ricardo Perottoni.
 
 # 1. Business Problem.
 
-A Insurance All é uma empresa que fornece seguro de saúde para seus clientes e o time de produtos está analisando a possibilidade de oferecer aos assegurados, um novo produto: Um seguro de automóveis.
+Insurance All is a company that provides health insurance to its customers and the product team is analyzing the possibility of offering its insured a new product: A car insurance.
 
-Assim como o seguro de saúde, os clientes desse novo plano de seguro de automóveis precisam pagar um valor anualmente à Insurance All para obter um valor assegurado pela empresa, destinado aos custos de um eventual acidente ou dano ao veículo.
+Just like the health insurance, the customers of this new car insurance plan need to pay an annual fee to Insurance All to receive an insured value from the company, intended for the costs of an eventual accident or damage to the vehicle.
 
-A Insurance All fez uma pesquisa com cerca de 380 mil clientes sobre o interesse em aderir a um novo produto de seguro de automóveis, no ano passado. Todos os clientes demonstraram interesse ou não em adquirir o seguro de automóvel e essas respostas ficaram salvas em um banco de dados junto com outros atributos dos clientes.
+Insurance All conducted a survey with approximately 380,000 customers about their interest in joining a new car insurance product last year. All customers demonstrated interest or not in acquiring car insurance and these answers were saved in a database along with other customer attributes.
 
-O time de produtos selecionou 127 mil novos clientes que não responderam a pesquisa para participar de uma campanha, no qual receberão a oferta do novo produto de seguro de automóveis. A oferta será feita pelo time de vendas através de ligações telefônicas.
+The product team selected 127,000 new customers who did not respond to the survey to participate in a campaign, in which they will receive the offer of the new car insurance product. The offer will be made by the sales team through phone calls.
 
-Contudo, o time de vendas tem uma capacidade de realizar 20 mil ligações dentro do período da campanha.
+However, the sales team has a capacity to make 20,000 calls within the campaign period.
 
-Nesse contexto, você foi contratado como um consultor de Ciência de Dados para construir um modelo que prediz se o cliente estaria ou não interessado no seguro de automóvel.
+In this context, you have been hired as a Data Science consultant to build a model that predicts if the customer would be interested or not in car insurance.
 
-Com a sua solução, o time de vendas espera conseguir priorizar as pessoas com maior interesse no novo produto e assim, otimizar a campanha realizando apenas contatos aos clientes mais propensos a realizar a compra.
+With your solution, the sales team expects to prioritize people with higher interest in the new product and thus optimize the campaign by only contacting the customers most likely to make the purchase.
 
-Como resultado da sua consultoria, você precisará entregar um relatório contendo algumas análises e respostas às seguintes perguntas:
+As a result of your consultancy, you will need to deliver a report containing some analyses and answers to the following questions:
 
-**1.** Principais Insights sobre os atributos mais relevantes de clientes interessados em adquirir um seguro de automóvel.
+1. Main Insights about the most relevant attributes of customers interested in acquiring car insurance.
 
-**2.** Qual a porcentagem de clientes interessados em adquirir um seguro de automóvel, o time de vendas conseguirá contatar fazendo 20.000 ligações?
+2. What percentage of customers interested in acquiring car insurance will the sales team be able to contact by making 20,000 calls?
 
-**3.** E se a capacidade do time de vendas aumentar para 40.000 ligações, qual a porcentagem de clientes interessados em adquirir um seguro de automóvel o time de vendas conseguirá contatar?
+3. And if the sales team's capacity increases to 40,000 calls, what percentage of customers interested in acquiring car insurance will the sales team be able to contact?
 
-**4.** Quantas ligações o time de vendas precisa fazer para contatar 80% dos clientes interessados em adquirir um seguro de automóvel?
+4. How many calls does the sales team need to make to contact 80% of the customers interested in acquiring car insurance?
 
 # 2. Business Assumptions.
+
+- Every customer that shows an interest greater than 50% will be classified as interested on purchase vehicle insurance.
+- This new product will cost $2.000,00 for each new customer.
+- This new product will cost $100.00 a call to contact each interested customer.
 
 # 3. Solution Strategy
 
 My strategy to solve this challenge was:
 
 **Step 01. Data Description:**
-
+ On this step, were checked many informations, as described bellow:
+ - Number of columns and lines;
+ - NAN values;
+ - Descriptive Statistics;
+ - Data distribuition;
+ 
 **Step 02. Feature Engineering:**
+On this step, were created new features, and some datas were changed, aiming the improvement of the analysis.
 
 **Step 03. Data Filtering:**
+N.A
 
 **Step 04. Exploratory Data Analysis:**
+On this step, were done:
+- Univariate Analysis
+![image]()
+- Bivariate Analysis - According insights on Step 10.
+- Multivariate Analysis
+![image]()
 
 **Step 05. Data Preparation:**
+On this step, were made a train-test slipt besides the dataset balancing and transformation.
+The dataset balancing were done by randon undersample.
+For data transformation were used:
+- Standardization
+- Reescaling
+- Target Encoder
+- Frequency Encoder
+
 
 **Step 06. Feature Selection:**
+Feature selection were made by using Extra Trees Classifier.
+
 
 **Step 07. Machine Learning Modelling:**
 

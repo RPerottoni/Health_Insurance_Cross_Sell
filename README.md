@@ -1,3 +1,5 @@
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/Screenshot_20230206_182309.png)
+
 # Health_Insurance_Cross_Sell
 
 #### This project was made by Ricardo Perottoni.

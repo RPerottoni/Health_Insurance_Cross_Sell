@@ -149,11 +149,16 @@ For the final solution, XGBoost Classifier was selected.
 
 # 8. Conclusions
 
-# 9. Lessons Learned
+As Data Scientist, is our duty think how to deliver our solutions through the company.Always, were possible, making the use easier for the users. For this project, per example, the solution was delivered as an automation using google sheet, where the user could just click in one button, to get the propension for each customer.
 
 ![ezgif com-gif-maker (1)](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/google_sheet_automation.gif)
 
+# 9. Lessons Learned
+
+How to solve a classification problem, delivering a solution on a easy way for whose interested in use that.
+
 # 10. Next Steps to Improve
+
 
 # LICENSE
 

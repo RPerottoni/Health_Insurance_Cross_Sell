@@ -83,14 +83,15 @@ The ML models trained on this project were:
 - LGBM Classifier
 
 **Step 08. Hyperparameter Fine Tuning:**
+
 For LGBM were used Optuna to find the best parameters.
 For XGB Classifier were used Randon Search to find out the best parameters.
 
 **Step 09. Convert Model Performance to Business Values:**
+On this step, were done some business assumptions, wich allow to answer the business questions. More details on item 7, bellow.
 
-
-**Step 10. Deploy Modelo to Production:**
-
+**Step 10. Deploy Model to Production:**
+The model were trained and uploaded to production using Flask API and Render.
 
 # 4. Data Insights
 

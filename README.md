@@ -32,14 +32,14 @@ As a result of your consultancy, you will need to deliver a report containing so
 
 # 2. Business Assumptions.
 
-- Every customer that shows an interest greater than 50% will be classified as interested on purchase vehicle insurance.
--  that 70% of interested customer will convert.
+- Every customer that shows a score greater than 50% will be classified as interested on purchase vehicle insurance.
 - This new product costs $2.000,00 for each new customer.
 - Costs are $100,00 to contact each person.
+- To predict the revenue, only customers wich score greater than 75% will be consider as buyer.
 
 # 3. Solution Strategy
 
-My strategy to solve this challenge was:
+The strategy to solve this business problem was:
 
 **Step 01. Data Description:**
  On this step, were checked many informations, as described bellow:
@@ -58,7 +58,9 @@ N.A
 On this step, were done:
 - Univariate Analysis
 ![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/univariate_analysis.png)
+
 - Bivariate Analysis - According insights on Step 10.
+
 - Multivariate Analysis
 ![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
 
@@ -71,10 +73,8 @@ For data transformation were used:
 - Target Encoder
 - Frequency Encoder
 
-
 **Step 06. Feature Selection:**
 Feature selection were made by using Extra Trees Classifier.
-
 
 **Step 07. Machine Learning Modelling:**
 The ML models trained on this project were:
@@ -96,57 +96,62 @@ For XGB Classifier were used Randon Search to find out the best parameters.
 
 **1. The interest on purchase the vehicle insurance is greater for customers that damaged their vehicle before and doesn't have insurance.**
     False, of the customers that damaged their car and doesn't have insurance, only 25% show interest in acquire vehicle insurance.
-![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_1.png)
 
 **2. The interest on purchase the vehicle insurance is greater for woman than men.**
    False, only 10% of women show interest in acquire vehicle insurance, whereas 13% of the men show interest on acquire vehicle insurance.
-![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_2.png)
 
 **3. The interest on purchase vehicle insurance is greater for vintage customers ( 7 months or more ).**
     False, the period that customers are on the company doensn't show influency on interest in buying vehicle insurance.
-![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_3.png)
 
 **4. The interest on purchase the vehicle insurance is greater for young customers.(Between 18 and 30 years old.)**
     False, customers that spend more than 30k yearly show greter interest on purchase vehicle insurance.
-![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_4.png)
 
 **5. The interest on purchase the vehicle insurance is greater for young customers.(Between 18 and 30 years old.)**
     False, adults and elderlies show greater interest on buying vehicle insurance.
-![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_5.png)
 
 **6. The interest on purchase the vehicle insurance is greater for customers that have driver license.**
     True, arround 12% of customers that hold a driving license show interest in buying the vehicle insurance.
-![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_6.png)
 
 **7. The interest on purchase the vehicle insurance is greater for customers that have new cars.**
     False, the interest is greater for customers that own an old car.
-![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_7.png)
 
 **8. The interest on purchase the vehicle insurance is greater for customers that have new cars and have damaged their vehicles.**
     False, of the customers who damaged their car, the ones that own a old car show greater interest in buying the vehicle insurance (29%), followed by customers that own used cars (27%).
-![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_8.png)
 
 **9. The interest on purchase the vehicle insurance is greater for elderly women.**
     False, adult women show greater interest in buying the vehicle insurance.
-![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_9.png)
 
 **10. The interest on purchase the vehicle insurance is lower for customers that are already insured.**
     True, less than 1% of customers already insured show interest on purchase the vehicle insurance.
-![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_10.png)
 
 # 5. Machine Learning Model Applied
-The ML model used was XGB Classifier, because of the performance.
+For the final solution, XGBoost Classifier was selected.
 
 # 6. Machine Learning Modelo Performance
 ![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
 
 # 7. Business Results
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/q_1.png)
 
-![ezgif com-gif-maker (1)](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/google_sheet_automation.gif)
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/q_2.png)
+
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/q_3.png)
 
 # 8. Conclusions
 
 # 9. Lessons Learned
+
+![ezgif com-gif-maker (1)](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/google_sheet_automation.gif)
 
 # 10. Next Steps to Improve
 

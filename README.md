@@ -136,7 +136,8 @@ The model were trained and uploaded to production using Flask API and Render.
 ![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/hypo_10.png)
 
 # 5. Machine Learning Model Applied
-For the final solution, XGBoost Classifier was selected.
+For the final solution, XGBoost Classifier was selected due the higher performance.
+![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/xgb_performance.png)
 
 # 6. Machine Learning Modelo Performance
 ![image](https://github.com/RPerottoni/Health_Insurance_Cross_Sell/blob/main/reports/figures/multivariate_analysis.png)
@@ -156,10 +157,11 @@ As Data Scientist, is our duty think how to deliver our solutions through the co
 
 # 9. Lessons Learned
 
-How to solve a classification problem, delivering a solution on a easy way for whose interested in use that.
+How to solve a classification problem, delivering a solution on an easy way for whose interested in use that.
 
 # 10. Next Steps to Improve
-
+* It's possible to use others transformations method seeking to improve the algorithim performance
+* It's possible to create/derivate new features that could help to better explain that phenomenon.
 
 # LICENSE
 

@@ -67,7 +67,7 @@ In this phase, the aim was to collect tha datas from the database. Where was use
 Also were done a data descriptive, focusing on identify and udenderstand if there are some outliers, missing values and data distribution for each feature, individually.
 The descriptive analysis can be accessed at the link bellow.
 
-[Descriptive Analysis](file///Users/perot/Documents/ds_repos/projects/Health_Insurance_Cross_Sell/notebooks/data_descriptive.html)
+[Descriptive Analysis](notebooks/data_descriptive.html)
 
 Before starting to work with the data, the dataset was separated into 3 new datasets, which were used to ensure machine learning model training without overfitting.
 

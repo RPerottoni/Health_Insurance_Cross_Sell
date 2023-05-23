@@ -197,11 +197,24 @@ As Data Scientists, it is our duty to consider how to deliver our solutions effe
 ![image](reports/figures/hypo_10.png)
 
 # 4 - Business Results
-![image](reports/figures/q_1.png)
+## 4.1 - Assumptions
 
-![image](reports/figures/q_2.png)
+1 - The cost for contacting each client has been set at $40.00.
 
-![image](reports/figures/q_3.png)
+2 - The minimum price for the new product has been set at $1,100.00.
+
+3 - Scores above 0.6 have been set to represent interested customers.
+
+## 4.2 - Business Questions
+
+### 1 - What percentage of customers interested in purchasing car insurance will the sales team be able to contact by making 20,000 calls?
+**By doing 20.000 calls, the sales team will make contact with 32% of the interested customers, resulting in a revenue of $6.179.500,00.**
+
+### 2 - If the sales team's capacity increases to 40,000 calls, what percentage of customers interested in purchasing car insurance will the sales team be able to contact?
+**By doing 40.000 calls, the sales team will make contact with 16% of the interested customers, resulting in a revenue of 5.379.500,00.**
+
+### 3 - How many calls does the sales team need to make to contact 80% of customers interested in purchasing car insurance?
+**By doing 5076 calls, the sales team will make contact with 80% of the interested customers, resulting in a revenue of $6.776.460,00**
 
 # 5 - Next Steps
 

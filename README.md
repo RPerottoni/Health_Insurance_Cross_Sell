@@ -2,11 +2,11 @@
 
 **Disclaimer**: The context, Company, CEO and business questions are ficticial.
 
-Este projeto de estudo foi realizado com o intuito de resolver o problema de negocio da empresa Insurance All, fazendo uso de algoritmos de machine learning e conceitos de ciencia de dados afim de calcular a probabilidade de um cliente em adquirir um novo produto da empresa. Desta forma, a empresa consegue focar em clietes com maior interesse em adquirir o novo produto, sendo mais eficiente no uso de seus recursos.
+This study project was carried out with the aim of solving the business problem of Insurance All company, using machine learning algorithms and data science concepts to calculate the probability of a customer acquiring a new product from the company. In this way, the company can focus on customers with a higher interest in acquiring the new product, being more efficient in the use of its resources.
 
-Pensando na acessibilidade do usuario final, a solucao deste projeto foi desenvolvida dentro do google sheets, onde o algoritmo de machine learning foi conectado a ela e com apenas um clique, o usuario e capaz de obter uma lista ordenada, comecando pelo cliente com o maior interesse em adquirir o produto.
+Keeping in mind the accessibility of the user, the solution for this project was developed within Google Sheets, where the machine learning algorithm was connected to it, and with just one click, the user is able to obtain an ordered list, starting with the customer with the highest interest in acquiring the product.
 
-Como resultado deste projeto, a empresa Insurance All pode aumentar sua lucratividade em xxx%, devido a reducao significativa no uso de recursos como: tempo e ligacoes desnecessarias.1
+As a result of this project, Insurance All company was able to increase its profitability due to the significant reduction in the use of resources such as time and unnecessary calls.
 
 # 1 - Business Problems
 

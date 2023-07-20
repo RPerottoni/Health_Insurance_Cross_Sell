@@ -2,11 +2,11 @@
 
 **Disclaimer**: The context, Company, CEO and business questions are ficticial.
 
-Este projeto de estudo foi realizado com o intuito de resolver o problema de negocio da empresa Insurance All, fazendo uso de algoritmos de machine learning e conceitos de ciencia de dados afim de calcular a probabilidade de um cliente em adquirir um novo produto da empresa. Desta forma, a empresa consegue focar em clietes com maior interesse em adquirir o novo produto, sendo mais eficiente no uso de seus recursos.
+This study project was carried out with the aim of solving the business problem of Insurance All company, using machine learning algorithms and data science concepts to calculate the probability of a customer acquiring a new product from the company. In this way, the company can focus on customers with a higher interest in acquiring the new product, being more efficient in the use of its resources.
 
-Pensando na acessibilidade do usuario final, a solucao deste projeto foi desenvolvida dentro do google sheets, onde o algoritmo de machine learning foi conectado a ela e com apenas um clique, o usuario e capaz de obter uma lista ordenada, comecando pelo cliente com o maior interesse em adquirir o produto.
+Keeping in mind the accessibility of the user, the solution for this project was developed within Google Sheets, where the machine learning algorithm was connected to it, and with just one click, the user is able to obtain an ordered list, starting with the customer with the highest interest in acquiring the product.
 
-Como resultado deste projeto, a empresa Insurance All pode aumentar sua lucratividade em xxx%, devido a reducao significativa no uso de recursos como: tempo e ligacoes desnecessarias.1
+As a result of this project, Insurance All company was able to increase its profitability due to the significant reduction in the use of resources such as time and unnecessary calls.
 
 # 1 - Business Problems
 
@@ -62,16 +62,12 @@ In this initial phase, the focus was on understanding the company's business and
 
 In this phase, the aim was to collect tha datas from the database. Where was used SQL and a Python library called pandas.
 
- ![image](reports/figures/sql_pandas.png)
-
 Also were done a data descriptive, focusing on identify and udenderstand if there are some outliers, missing values and data distribution for each feature, individually.
 The descriptive analysis can be accessed at the link bellow.
 
 [Descriptive Analysis](notebooks/data_descriptive.html)
 
 Before starting to work with the data, the dataset was separated into 3 new datasets, which were used to ensure machine learning model training without overfitting.
-
-![image](reports/figures/train_test_split.png)
 
 The 3 new dataset are presented below:
 
@@ -123,7 +119,11 @@ In this phase, we selected 3 ML models to work with:
 
 Were LGBM and XGboost performed very close each other and better than KNN.
 
-![image](reports/figures/ML_models_perf.png)
+| ML Model                | Precision @K            | Recall @K              |
+|:------------------------|:------------------------|:-----------------------|
+| LGBM                    | 0.338483                | 0.718607               | 
+| XGB                     | 0.335833                | 0.712982               |
+| KNN                     | 0.294935                | 0.626154               |
 
 To further advance the project, hyperparameter fine-tuning was performed on the LGBM (LightGBM) and XGBoost models using a random search technique. After evaluating their performance, it was found that both algorithms performed similarly in terms of predictive accuracy.
 
@@ -139,7 +139,9 @@ Precision focuses on correctly identifying the customers who are likely to make 
 To ensure a more reliable assessment of the model's performance and its generalization ability when deployed in a production environment, a cross-validation was conducted. Cross-validation helps in evaluating the model's performance more closely to what can be expected in real-world scenarios.
 The performance of the algorithm after cross-validation can be assessed below.
 
-![image](reports/figures/xgb_performance_real.png)
+| ML Model                | Precision @K            | STD                    |
+|:------------------------|:------------------------|:-----------------------|
+| XGB                     | 0.3145                  | +/- 0.001              | 
 
 The lift curve represents how a model performs in comparison to a baseline. It is a visual representation of the model's predictive power in relation to random selection. 
 
@@ -223,7 +225,20 @@ As this was the first cycle, there are improvements to be considered in order to
 - Work on fine tunning, focused on find the best parameter to improve the metric.
 - Get more data and re-training the ML model.
 
+## 6 - Technologies ( Tecnologias )
+
+[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
+[![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white)](https://scipy.org/)
+[![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+[![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Render](https://img.shields.io/badge/-Render-%23430098.svg?style=for-the-badge&logo=Render&logoColor=white)](https://www.render.com/)
+
 # AUTHOR
 Ricardo Perottoni
 
 # All Rights Reserved - Comunidade DS 2022
+    

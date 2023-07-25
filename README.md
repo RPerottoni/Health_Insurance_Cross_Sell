@@ -1,6 +1,11 @@
 ![image](reports/figures/Screenshot_20230206_182309.png)
 
-**Disclaimer**: The context, Company, CEO and business questions are ficticial.
+
+# Health insurance cross sell prediction
+
+**Disclaimer**: Health Insurance Cross Sell is a Learn to Rank project, based on this [Kaggle Competition](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction). The context, company and business problem are ficticial.
+
+# 1. Business scenario
 
 This study project was carried out with the aim of solving the business problem of Insurance All company, using machine learning algorithms and data science concepts to calculate the probability of a customer acquiring a new product from the company. In this way, the company can focus on customers with a higher interest in acquiring the new product, being more efficient in the use of its resources.
 
@@ -8,7 +13,6 @@ Keeping in mind the accessibility of the user, the solution for this project was
 
 As a result of this project, Insurance All company was able to increase its profitability due to the significant reduction in the use of resources such as time and unnecessary calls.
 
-# 1 - Business Problems
 
 ## 1.1 - Insurance All
 
@@ -26,137 +30,34 @@ In this context, you have been hired as a Data Science consultant to build a mod
 
 With your solution, the sales team expects to prioritize people with higher interest in the new product and thus optimize the campaign by only contacting the customers most likely to make the purchase.
 
-## 1.3 - About the Data
-The data used on this project are from this [Kaggle Competition](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction) ![kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white)
-
-The dataset used for the solution development has approximately 380.000 registrations and the customer attributes are described bellow.
-
----
-| Column | Description |
-| --- | --- |
-|id|                    Unique ID for each customer |
-|gender|                Customer gender |
-|age|                   Customer age |
-|region_code|           Region code where the customer lives |
-|policy_sales_channel|  Channel code of contact chosen by the customer |
-|driving_license|       Does the customer have a driving license? |
-|vehicle_age|           Age of the customer's car |
-|vehicle_damage|        Was the customer's car damaged? |
-|previously_insured|    Has the customer been insured previously? |
-|annual_premium|        Annual premium value (for health insurance) |
-|vintage|               Number of days for which the customer has health insurance |
-|response|              Is the customer interested in having car insurance? |
-
-
 # 2 - Solution Strategy
 
-The solution follows the **CRISP-DM** (Cross-Industry Standard Process for Data Mining), which is a cyclic method of development. At the end of the first cycle, the team will have a first version end-to-end of this solution, allowing them to achieve good results faster and identify and address potential problems effectively.
+The solution follows the **CRISP-DM** (Cross-Industry Standard Process for Data Mining), which is a cyclic method of development. At the end of the first cycle, the team will have a first version end-to-end of this solution, allowing them to achieve good results faster, identify and address potential problems effectively.
 
 ![image](reports/figures/crispds_one.png)
 
-## 2.1 - Business Understanding
 
-In this initial phase, the focus was on understanding the company's business and clarify wich are the project's objectives and requirements.
+**Step 01. Data Description:** My goal is to use statistics metrics to identify data outside the scope of business.
 
-## 2.2 - Data Extraction and Data Descriptive
+**Step 02. Feature Engineering:** Derive new attributes based on the original variables to better describe the phenomenon that will be modeled.
 
-In this phase, the aim was to collect tha datas from the database. Where was used SQL and a Python library called pandas.
+**Step 03. Data Filtering:** Filter rows and select columns that do not contain information for modeling or that do not match the scope of the business.
 
-Also were done a data descriptive, focusing on identify and udenderstand if there are some outliers, missing values and data distribution for each feature, individually.
-The descriptive analysis can be accessed at the link bellow.
+**Step 04. Exploratory Data Analysis:** Explore the data to find insights and better understand the impact of variables on model learning.
 
-[Descriptive Analysis](notebooks/data_descriptive.html)
+**Step 05. Data Preparation:** Prepare the data so that the Machine Learning models can learn the specific behavior.
 
-Before starting to work with the data, the dataset was separated into 3 new datasets, which were used to ensure machine learning model training without overfitting.
+**Step 06. Feature Selection:** Selection of the most significant attributes for training the model.
 
-The 3 new dataset are presented below:
+**Step 07. Machine Learning Modelling:** Machine Learning model training.
 
-**Train**: contains around 70% of data and it's used for machine learning algorithm training. 
+**Step 08. Hyperparameter Fine Tunning:** Choose the best values for each of the parameters of the model selected from the previous step.
 
-**Validation**: contains around 15% of data and it's used to set the best parameters.
+**Step 09. Convert Model Performance to Business Values:** Convert the performance of the Machine Learning model into a business result.
 
-**Test**: Also contains around 15% of the data and it's used to evaluate the model performance.
+**Step 10. Deploy Modelo to Production:** Publish the model in a cloud environment so that other people or services can use the results to improve the business decision.
 
-## 2.3 - Data Cleaning and feature engineering
-Data clenaing not required.
-
-As part of the feature engineering process in the first cycle, two features were modified. Initially, these features contained object values but were transformed into numerical values.
-
-## 2.4 - Exploratory Data Analysis
-This phase has involved exploring the data, identifying patterns, and gaining insights into its characteristics.
-
-- Univariate Analysis
-![image](reports/figures/univariate_analysis.png)
-
-- Bivariate Analysis
-In this phase were created businees assumptions to be checked if are true or false. This could be checked out on phase 3 bellow.
-
-- Multivariate Analysis
-![image](reports/figures/multivariate_analysis.png)
-
-## 2.5 - Data Modeling
-In this phase were done data transformations to normalize the scale of features, help make the distribution more summetrical aiming to improve the ML model performance.
-
-Data transformations methods used:
-- Frequency Encode
-- Standard Scaler
-- Min. Max. Scaler
-
-These transformation were applied on training and validation dataset.
-
-## 2.6 - Machine Learning Algorithms
-
-### 2.6.1 - Feature Selection
-This phase started by doing a feture selection using Extra Trees Classifier, aiming to select only the most important features to be used to train the machine learning models.
-
-![image](reports/figures/feture_importance.png)
-
-### 2.6.2 - Machine Learning Model training and performance
-In this phase, we selected 3 ML models to work with:
-- KNN Classifier
-- LGBM Classifier
-- XGBoost Classifier
-
-Were LGBM and XGboost performed very close each other and better than KNN.
-
-| ML Model                | Precision @K            | Recall @K              |
-|:------------------------|:------------------------|:-----------------------|
-| LGBM                    | 0.338483                | 0.718607               | 
-| XGB                     | 0.335833                | 0.712982               |
-| KNN                     | 0.294935                | 0.626154               |
-
-To further advance the project, hyperparameter fine-tuning was performed on the LGBM (LightGBM) and XGBoost models using a random search technique. After evaluating their performance, it was found that both algorithms performed similarly in terms of predictive accuracy.
-
-Considering the specific requirements of this project, a decision was made to proceed with using XGBoost over LGBM. This choice was driven by the fact that XGBoost is lighter in terms of computational resources compared to LGBM.
-
-## 2.6 - Evaluation
-
-
-In this project, the metric to be considered will be precision. This decision is based on the business problem, where the company has limited resources and wants to maximize the efficiency of its sales area. 
-
-Precision focuses on correctly identifying the customers who are likely to make a purchase, minimizing false positives and ensuring that the company is targeting the most relevant prospects. By prioritizing precision, the company can make every effort count towards reaching potential customers who are more likely to convert and purchase the product.
-
-To ensure a more reliable assessment of the model's performance and its generalization ability when deployed in a production environment, a cross-validation was conducted. Cross-validation helps in evaluating the model's performance more closely to what can be expected in real-world scenarios.
-The performance of the algorithm after cross-validation can be assessed below.
-
-| ML Model                | Precision @K            | STD                    |
-|:------------------------|:------------------------|:-----------------------|
-| XGB                     | 0.3145                  | +/- 0.001              | 
-
-The lift curve represents how a model performs in comparison to a baseline. It is a visual representation of the model's predictive power in relation to random selection. 
-
-![image](reports/figures/xgb_lift.png)
-
-Based on the graph above, it is possible to identify that the proposed model performs approximately three times better than a random selection, when workin with 20% of the data. This indicates that the model is significantly more effective at identifying the target group compared to randomly selecting individuals. The lift curve graph demonstrates the substantial improvement achieved by the model in terms of performance and targeting efficiency.
-
-## 2.6 - Deployment
-To make the solution available and operational for the users we wrote our ETL using Flask framework and we integrated it at Render platform.
-
-As Data Scientists, it is our duty to consider how to deliver our solutions effectively within the company. Whenever possible, we should strive to make the user experience as easy as possible. In this project, for example, the solution was delivered as an automation using Google Sheets, allowing the user to simply click a button to obtain the propensity for each customer.
-
-![ezgif com-gif-maker (1)](reports/figures/google_sheet_automation.gif)
-
-# 3. Data Insights
+# 4. Top 3 Data insights
 
 **1. The interest on purchase the vehicle insurance is greater for customers that damaged their vehicle before and doesn't have insurance.**
     False, of the customers that damaged their car and doesn't have insurance, only 25% show interest in acquire vehicle insurance.
@@ -198,8 +99,46 @@ As Data Scientists, it is our duty to consider how to deliver our solutions effe
     True, less than 1% of customers already insured show interest on purchase the vehicle insurance.
 ![image](reports/figures/hypo_10.png)
 
-# 4 - Business Results
-## 4.1 - Assumptions
+
+# 5. Machine learning models applied
+In this phase, we selected 3 ML models to work with:
+- KNN Classifier
+- LGBM Classifier
+- XGBoost Classifier
+
+Were LGBM and XGboost performed very close each other and better than KNN.
+
+| ML Model                | Precision @K            | Recall @K              |
+|:------------------------|:------------------------|:-----------------------|
+| LGBM                    | 0.2686    +/- 0.0005    | 0.9567   +/- 0.0019    | 
+| XGB                     | 0.2669    +/- 0.0009    | 0.9507   +/- 0.0031    |
+| KNN                     | 0.2276    +/2 0.0037    | 0.8108   +/2 0.0037    |
+
+To further advance the project, hyperparameter fine-tuning was performed on the LGBM (LightGBM) and XGBoost models using a bysean search algorithm.
+
+# 6. Machine learning model performance
+
+In this step, we selected the XGB Classifier and LGBM Classifier algorithms to be executed with their parameters tuned. We evaluated their performance using the test dataset, which simulates real data, aiming to analyze their performance closely as if one of them were in production.
+
+The performance for both models could be checked bellow:
+| ML Model                | Precision @20.000         | Recall @20.000        |
+|:------------------------|:------------------------|:-----------------------|
+| LGBM                    | 0.33435                 | 0.713204               | 
+| XGB                     | 0.33365                 | 0.711711               |
+
+Besides of recall and precision metrics, for a Learn to Rank problem is a good practrice to analyze the Cumulative Gain and Lift Curve chart, that helps to have a easy understanding about the model performance.
+
+![image](reports/figures/xgb_final.png)
+
+![image](reports/figures/lgbm_final.png)
+
+Firstly, we evaluated the metrics using a dataset of 20,000 records, which makes up about 27% of the total dataset.
+
+By examining the Cumulative Gain chart, we can observe that if we were to reach out to approximately 20,000 clients (which represents around 27% of the total), we would be able to successfully contact 80% of the interested customers. 
+
+Discussing the lift curve chart, we can see that our model performs approximately three times better than the random selection process, for 27% of the data (20.000 clients). 
+
+# 7. Business Results
 
 1 - The cost for contacting each client has been set at $40.00.
 
@@ -207,7 +146,7 @@ As Data Scientists, it is our duty to consider how to deliver our solutions effe
 
 3 - Scores above 0.6 have been set to represent interested customers.
 
-## 4.2 - Business Questions
+## 7.1 - Business Questions
 
 ### 1 - What percentage of customers interested in purchasing car insurance will the sales team be able to contact by making 20,000 calls?
 **By doing 20.000 calls, the sales team will make contact with 32% of the interested customers, resulting in a revenue of $6.179.500,00.**
@@ -218,14 +157,13 @@ As Data Scientists, it is our duty to consider how to deliver our solutions effe
 ### 3 - How many calls does the sales team need to make to contact 80% of customers interested in purchasing car insurance?
 **By doing 5076 calls, the sales team will make contact with 80% of the interested customers, resulting in a revenue of $6.776.460,00**
 
-# 5 - Next Steps
-
+# 8. Next steps to improve
 As this was the first cycle, there are improvements to be considered in order to achieve the best performance.
 - Work on feature engineering, creating new features that could better explain the phenomenon.
-- Work on fine tunning, focused on find the best parameter to improve the metric.
 - Get more data and re-training the ML model.
+- Try to use others ML Models.
 
-## 6 - Technologies ( Tecnologias )
+# 9 - Technologies
 
 [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
 [![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
@@ -240,5 +178,4 @@ As this was the first cycle, there are improvements to be considered in order to
 # AUTHOR
 Ricardo Perottoni
 
-# All Rights Reserved - Comunidade DS 2022
-    
+###### All Rights Reserved - Comunidade DS 2022

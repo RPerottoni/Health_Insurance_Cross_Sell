@@ -57,7 +57,7 @@ The solution follows the **CRISP-DM** (Cross-Industry Standard Process for Data 
 
 **Step 10. Deploy Modelo to Production:** Publish the model in a cloud environment so that other people or services can use the results to improve the business decision.
 
-# 4. Top 3 Data insights
+# 4. Top 10 Data insights
 
 **1. The interest on purchase the vehicle insurance is greater for customers that damaged their vehicle before and doesn't have insurance.**
     False, of the customers that damaged their car and doesn't have insurance, only 25% show interest in acquire vehicle insurance.

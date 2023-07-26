@@ -149,13 +149,13 @@ Discussing the lift curve chart, we can see that our model performs approximatel
 ## 7.1 - Business Questions
 
 ### 1 - What percentage of customers interested in purchasing car insurance will the sales team be able to contact by making 20,000 calls?
-**By doing 20.000 calls, the sales team will make contact with 32% of the interested customers, resulting in a revenue of $6.179.500,00.**
+**By doing 20.000 calls, wich represents 26% of the total of data, the sales team will make contact with 72% of the interested customers.**
 
 ### 2 - If the sales team's capacity increases to 40,000 calls, what percentage of customers interested in purchasing car insurance will the sales team be able to contact?
-**By doing 40.000 calls, the sales team will make contact with 16% of the interested customers, resulting in a revenue of 5.379.500,00.**
+**By doing 40.000 calls, the sales team will make contact with 99.4% of the interested customers.**
 
 ### 3 - How many calls does the sales team need to make to contact 80% of customers interested in purchasing car insurance?
-**By doing 5076 calls, the sales team will make contact with 80% of the interested customers, resulting in a revenue of $6.776.460,00**
+**By doing 23500 calls, the sales team will make contact with 80% of the interested customers.**
 
 # 8. Next steps to improve
 As this was the first cycle, there are improvements to be considered in order to achieve the best performance.

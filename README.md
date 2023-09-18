@@ -57,7 +57,7 @@ The solution follows the **CRISP-DM** (Cross-Industry Standard Process for Data 
 
 **Step 10. Deploy Modelo to Production:** Publish the model in a cloud environment so that other people or services can use the results to improve the business decision.
 
-# 4. Top 10 Data insights
+# 4. Top 5 Data insights
 
 **1. The interest on purchase the vehicle insurance is greater for customers that damaged their vehicle before and doesn't have insurance.**
     False, of the customers that damaged their car and doesn't have insurance, only 25% show interest in acquire vehicle insurance.
@@ -103,34 +103,31 @@ The solution follows the **CRISP-DM** (Cross-Industry Standard Process for Data 
 # 5. Machine learning models applied
 In this phase, we selected 3 ML models to work with:
 - KNN Classifier
-- LGBM Classifier
+- Logistic Regression
 - XGBoost Classifier
 
 Were LGBM and XGboost performed very close each other and better than KNN.
 
 | ML Model                | Precision @K            | Recall @K              |
 |:------------------------|:------------------------|:-----------------------|
-| LGBM                    | 0.2686    +/- 0.0005    | 0.9567   +/- 0.0019    | 
-| XGB                     | 0.2669    +/- 0.0009    | 0.9507   +/- 0.0031    |
-| KNN                     | 0.2276    +/2 0.0037    | 0.8108   +/2 0.0037    |
+| Logistic Regression     | 0.2538    +/- 0.0012    | 0.9041   +/- 0.0042    | 
+| XGB                     | 0.2670    +/- 0.0007    | 0.9511   +/- 0.0024    |
+| KNN                     | 0.2211    +/2 0.0005    | 0.7875   +/2 0.0018    |
 
 To further advance the project, hyperparameter fine-tuning was performed on the LGBM (LightGBM) and XGBoost models using a bysean search algorithm.
 
 # 6. Machine learning model performance
 
-In this step, we selected the XGB Classifier and LGBM Classifier algorithms to be executed with their parameters tuned. We evaluated their performance using the test dataset, which simulates real data, aiming to analyze their performance closely as if one of them were in production.
+In this step, we selected the XGB Classifier algorithm to be performed with tuned paramenters. We evaluated their performance using the test dataset, which simulates real data, aiming to analyze the performance closely as if it is in production.
 
-The performance for both models could be checked bellow:
-| ML Model                | Precision @20.000         | Recall @20.000        |
-|:------------------------|:------------------------|:-----------------------|
-| LGBM                    | 0.33435                 | 0.713204               | 
-| XGB                     | 0.33365                 | 0.711711               |
+The performance for XGB can be checked bellow:
+| ML Model                | Precision @20.000       | Recall @20.000       |
+|:------------------------|:------------------------|:---------------------|
+| XGB                     | 0.3111                  | 0.8334               |
 
 Besides of recall and precision metrics, for a Learn to Rank problem is a good practrice to analyze the Cumulative Gain and Lift Curve chart, that helps to have a easy understanding about the model performance.
 
 ![image](reports/figures/xgb_final.png)
-
-![image](reports/figures/lgbm_final.png)
 
 Firstly, we evaluated the metrics using a dataset of 20,000 records, which makes up about 27% of the total dataset.
 
@@ -156,6 +153,15 @@ Discussing the lift curve chart, we can see that our model performs approximatel
 
 ### 3 - How many calls does the sales team need to make to contact 80% of customers interested in purchasing car insurance?
 **By doing 23500 calls, the sales team will make contact with 80% of the interested customers.**
+
+## 7.2 - Business Problem Solution
+
+The ultimate solution to this business problem is an API that can be accessed directly from Google Sheets. This solution was developed focusing in being user-friendly and it is a plugin for a tool that the users already are familiar with.
+
+The functionality is illustrated in the image below, where users only need their Google Sheets containing the customer data they want to classify. With just a few clicks, they can obtain a sorted list of customers, starting with the most likely to purchase the product and ending with the least likely.
+
+![image](reports/figures/google_sheet_automation.gif)
+
 
 # 8. Next steps to improve
 As this was the first cycle, there are improvements to be considered in order to achieve the best performance.

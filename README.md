@@ -5,6 +5,7 @@
 
 **Disclaimer**: Health Insurance Cross Sell is a Learn to Rank project, based on this [Kaggle Competition](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction). The context, company and business problem are ficticial.
 
+
 # 1. Business scenario
 
 This study project was carried out with the aim of solving the business problem of Insurance All company, using machine learning algorithms and data science concepts to calculate the probability of a customer acquiring a new product from the company. In this way, the company can focus on customers with a higher interest in acquiring the new product, being more efficient in the use of its resources.
@@ -78,26 +79,6 @@ The solution follows the **CRISP-DM** (Cross-Industry Standard Process for Data 
 **5. The interest on purchase the vehicle insurance is greater for young customers.(Between 18 and 30 years old.)**
     False, adults and elderlies show greater interest on buying vehicle insurance.
 ![image](reports/figures/hypo_5.png)
-
-**6. The interest on purchase the vehicle insurance is greater for customers that have driver license.**
-    True, arround 12% of customers that hold a driving license show interest in buying the vehicle insurance.
-![image](reports/figures/hypo_6.png)
-
-**7. The interest on purchase the vehicle insurance is greater for customers that have new cars.**
-    False, the interest is greater for customers that own an old car.
-![image](reports/figures/hypo_7.png)
-
-**8. The interest on purchase the vehicle insurance is greater for customers that have new cars and have damaged their vehicles.**
-    False, of the customers who damaged their car, the ones that own a old car show greater interest in buying the vehicle insurance (29%), followed by customers that own used cars (27%).
-![image](reports/figures/hypo_8.png)
-
-**9. The interest on purchase the vehicle insurance is greater for elderly women.**
-    False, adult women show greater interest in buying the vehicle insurance.
-![image](reports/figures/hypo_9.png)
-
-**10. The interest on purchase the vehicle insurance is lower for customers that are already insured.**
-    True, less than 1% of customers already insured show interest on purchase the vehicle insurance.
-![image](reports/figures/hypo_10.png)
 
 
 # 5. Machine learning models applied

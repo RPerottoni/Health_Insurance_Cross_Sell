@@ -2,6 +2,9 @@
 
 ![image](reports/figures/Screenshot_20230206_182309.png)
 
+
+# Health insurance cross sell prediction
+
 **Disclaimer**: Health Insurance Cross Sell is a Learn to Rank project, based on this [Kaggle Competition](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction). The context, company and business problem are ficticial.
 
 # Summary
@@ -9,9 +12,9 @@
 * [1. Business Scenario](#1-business-scenario)
 * [2. Solution Strategy](#2-solution-strategy)
 * [3. Data Filtering](#3-data-filtering)
-* [4. Top 5 Data Insights](#4-top-5-data-insights)
+* [4. Hypothesis and Insights](#4-hyphotesis-and-insights)
 * [5. Machine Learning Models](#5-machine-learning-models)
-* [6. Machine Learning Models Performance](#6-machine-learning-models-performance)
+* [6. Machine Learning Performance](#6-machine-learning-performance)
 * [7. Business Results](#7-business-results)
 * [8. Next Steps](#8-next-steps)
 * [9. Technologies](#9-technologies)
@@ -41,7 +44,7 @@ In this context, you have been hired as a Data Science consultant to build a mod
 
 With your solution, the sales team expects to prioritize people with higher interest in the new product and thus optimize the campaign by only contacting the customers most likely to make the purchase. </p>
 
-# 2 - Solution Strategy
+# 2. Solution Strategy
 
 <p style="text-align: justify"> The solution follows the **CRISP-DM** (Cross-Industry Standard Process for Data Mining), which is a cyclic method of development. At the end of the first cycle, the team will have a first version end-to-end of this solution, allowing them to achieve good results faster, identify and address potential problems effectively. </p>
 
@@ -68,8 +71,8 @@ With your solution, the sales team expects to prioritize people with higher inte
 
 **Step 10. Deploy Modelo to Production:** Publish the model in a cloud environment so that other people or services can use the results to improve the business decision.
 
-# 3. Data Filterging
-Not applied on the first cycle of the project.
+# 3. Data Filtering
+Filters are not applied on this project.
 
 # 4. Hypothesis and Insights
 
@@ -94,13 +97,12 @@ Not applied on the first cycle of the project.
 ![image](reports/figures/hypo_4.png)
 
 **5. The interest on purchase the vehicle insurance is greater for young customers.(Between 18 and 30 years old.)**
-
     False, adults and elderlies show greater interest on buying vehicle insurance.
 ![image](reports/figures/hypo_5.png)
 
 
 # 5. Machine Learning Models
-<p style="text-align: justify"> In this phase, we selected 3 differents machine learning models to training and evaluate, the algorithms selected to use on this project are listed bellow. </p>
+<p style="text-align: justify"> In this phase, we selected 3 differents machine learning algorithms to train and evaluate, the algorithms selected to use on this project are listed bellow. </p>
 - KNN Classifier
 - Logistic Regression
 - XGBoost Classifier
@@ -115,7 +117,7 @@ Were LGBM and XGboost performed very close each other and better than KNN.
 
 To further advance the project, hyperparameter fine-tuning was performed on the LGBM (LightGBM) and XGBoost models using a bysean search algorithm.
 
-# 6. Machine Learning Models Performance
+# 6. Machine Learning Performance
 
 <p style="text-align: justify"> In this step, we selected the XGB Classifier algorithm to be performed with tuned paramenters. We evaluated their performance using the test dataset, which simulates real data, aiming to analyze the performance closely as if it is in production. </p>
 
@@ -147,10 +149,10 @@ Discussing the lift curve chart, we can see that our model performs approximatel
 #### 1 - What percentage of customers interested in purchasing car insurance will the sales team be able to contact by making 20,000 calls?
 >By doing 20.000 calls, wich represents 26% of the total of data, the sales team will make contact with 72% of the interested customers.
 
-####  2 - If the sales team's capacity increases to 40,000 calls, what percentage of customers interested in purchasing car insurance will the sales team be able to contact?
+#### 2 - If the sales team's capacity increases to 40,000 calls, what percentage of customers interested in purchasing car insurance will the sales team be able to contact?
 >By doing 40.000 calls, the sales team will make contact with 99.4% of the interested customers.
 
-####  3 - How many calls does the sales team need to make to contact 80% of customers interested in purchasing car insurance?
+#### 3 - How many calls does the sales team need to make to contact 80% of customers interested in purchasing car insurance?
 >By doing 23500 calls, the sales team will make contact with 80% of the interested customers.
 
 ## 7.2 - Business Problem Solution
@@ -169,7 +171,7 @@ As this was the first cycle, there are improvements to be considered in order to
 - Get more data and re-training the ML model.
 - Try to use others ML Models.
 
-# 9 - Technologies
+# 9. Technologies
 
 [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
 [![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)

@@ -2,9 +2,6 @@
 
 ![image](reports/figures/Screenshot_20230206_182309.png)
 
-
-# Health insurance cross sell prediction
-
 **Disclaimer**: Health Insurance Cross Sell is a Learn to Rank project, based on this [Kaggle Competition](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction). The context, company and business problem are ficticial.
 
 # Summary
@@ -19,7 +16,7 @@
 * [8. Next Steps](#8-next-steps)
 * [9. Technologies](#9-technologies)
 
-# 1. Business scenario
+# 1. Business Scenario
 
 <p style="text-align: justify"> This study project was carried out with the aim of solving the business problem of Insurance All company, using machine learning algorithms and data science concepts to calculate the probability of a customer acquiring a new product from the company. In this way, the company can focus on customers with a higher interest in acquiring the new product, being more efficient in the use of its resources.
 

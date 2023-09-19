@@ -1,14 +1,18 @@
 ![image](reports/figures/Screenshot_20230206_182309.png)
 
-
-# Health insurance cross sell prediction
-
 **Disclaimer**: Health Insurance Cross Sell is a Learn to Rank project, based on this [Kaggle Competition](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction). The context, company and business problem are ficticial.
 
 # Summary
 
 * [1. Business Scenario](#1-business-scenario)
-* [2. Solution Strategy](#2---solution-strategy)
+* [2. Solution Strategy](#2-solution-strategy)
+* [3. Data Filtering](#3-data-filtering)
+* [4. Top 5 Data Insights](#4-top-5-data-insights)
+* [5. Machine Learning Models](#5-machine-learning-models)
+* [6. ML Models Performance](#6-ml-models-performance)
+* [7. Business Results](#7-business-results)
+* [8. Next Steps](#8-next-steps)
+* [9. Technologies](#9-technologies)
 
 # 1. Business scenario
 
@@ -85,8 +89,8 @@ The solution follows the **CRISP-DM** (Cross-Industry Standard Process for Data 
 ![image](reports/figures/hypo_5.png)
 
 
-# 5. Machine learning models applied
-In this phase, we selected 3 ML models to work with:
+# 5. Machine Learning Models
+In this phase, we selected 3 differents machine learning models to training and evaluate, the algorithms selected to use on this project are listed bellow.
 - KNN Classifier
 - Logistic Regression
 - XGBoost Classifier
@@ -101,7 +105,7 @@ Were LGBM and XGboost performed very close each other and better than KNN.
 
 To further advance the project, hyperparameter fine-tuning was performed on the LGBM (LightGBM) and XGBoost models using a bysean search algorithm.
 
-# 6. Machine learning model performance
+# 6. ML Models Performance
 
 In this step, we selected the XGB Classifier algorithm to be performed with tuned paramenters. We evaluated their performance using the test dataset, which simulates real data, aiming to analyze the performance closely as if it is in production.
 
@@ -148,9 +152,10 @@ The functionality is illustrated in the image below, where users only need their
 ![image](reports/figures/google_sheet_automation.gif)
 
 
-# 8. Next steps to improve
+# 8. Next Steps
 As this was the first cycle, there are improvements to be considered in order to achieve the best performance.
 - Work on feature engineering, creating new features that could better explain the phenomenon.
+- Uses differents methods to transform the data.
 - Get more data and re-training the ML model.
 - Try to use others ML Models.
 

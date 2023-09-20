@@ -1,6 +1,6 @@
 # HEALTH INSURANCE CROSS-SELL
 
-![image](reports/figures/Screenshot_20230206_182309.png)
+![image](reports/figures/healthinsurance.png)
 
 **Disclaimer**: Health Insurance Cross Sell is a Learn to Rank project, based on this [Kaggle Competition](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction). The context, company and business problem are ficticial.
 
@@ -45,7 +45,7 @@ With your solution, the sales team expects to prioritize people with higher inte
 
 <p style="text-align: justify"> The solution follows the **CRISP-DM** (Cross-Industry Standard Process for Data Mining), which is a cyclic method of development. At the end of the first cycle, the team will have a first version end-to-end of this solution, allowing them to achieve good results faster, identify and address potential problems effectively. </p>
 
-![image](reports/figures/crispds_one.png)
+![image](reports/figures/crispds_one.jpg)
 
 
 **Step 01. Data Description:** My goal is to use statistics metrics to identify data outside the scope of business.

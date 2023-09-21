@@ -4,7 +4,7 @@
 
 **Disclaimer**: Health Insurance Cross Sell is a Learn to Rank project, based on this [Kaggle Competition](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction). The context, company and business problem are ficticial.
 
-# Summary
+# Table of Contents
 
 * [1. Business Scenario](#1-business-scenario)
 * [2. Solution Strategy](#2-solution-strategy)

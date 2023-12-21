@@ -99,12 +99,7 @@ Filters are not applied on this project.
 
 
 # 5. Machine Learning Models
-<p style="text-align: justify"> In this phase, we selected 3 differents machine learning algorithms to train and evaluate, the algorithms selected to use on this project are listed bellow. </p>
-- KNN Classifier
-- Logistic Regression
-- XGBoost Classifier
-
-Were LGBM and XGboost performed very close each other and better than KNN.
+<p style="text-align: justify">In this phase, three different machine learning algorithms were selected for training and evaluation. The algorithms and the evaluated metrics are listed in the table below </p>
 
 | ML Model                | Precision @K            | Recall @K              |
 |:------------------------|:------------------------|:-----------------------|
@@ -134,12 +129,6 @@ By examining the Cumulative Gain chart, we can observe that if we were to reach 
 Discussing the lift curve chart, we can see that our model performs approximately three times better than the random selection process, for 27% of the data (20.000 clients). </p>
 
 # 7. Business Results
-
-1 - The cost for contacting each client has been set at $40.00.
-
-2 - The minimum price for the new product has been set at $1,100.00.
-
-3 - Scores above 0.6 have been set to represent interested customers.
 
 ## 7.1 - Business Questions
 

@@ -4,17 +4,6 @@
 
 **Disclaimer**: Health Insurance Cross Sell is a Learn to Rank project, based on this [Kaggle Competition](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction). The context, company and business problem are ficticial.
 
-# Table of Contents
-
-* [1. Business Scenario](#1-business-scenario)
-* [2. Solution Strategy](#2-solution-strategy)
-* [4. Hypothesis and Insights](#4-hyphotesis-and-insights)
-* [5. Machine Learning Models](#5-machine-learning-models)
-* [6. Machine Learning Performance](#6-machine-learning-performance)
-* [7. Business Results](#7-business-results)
-* [8. Next Steps](#8-next-steps)
-* [9. Technologies](#9-technologies)
-
 # 1. Business Scenario
 
 <p style="text-align: justify"> The client is an Insurance company that has provided health insurance to its customers. Now they need our help in building a model to predict whether the policyholders (customers) from past year will also be interested in Vehicle Insurance provided by the company.
@@ -109,31 +98,31 @@ Publish the model in a cloud environment so that other people or services can us
 
 **Hypothesis False**. 75% of the customers does not have interest in buying the vehicle insurance.
 
-![image](reports/figures/hypo_1.png)
+![image](reports/figures/hypo_01.png)
 
 **2. The interest on purchase the vehicle insurance is greater for woman than men.**
 
 **Hypothesis is false**. Only 10% of women express interest in buying vehicle insurance, compared to 14% of men.
 
-![image](reports/figures/hypo_2.png)
+![image](reports/figures/hypo_02.png)
 
 **3. The interest on purchase vehicle insurance is greater for vintage customers ( 7 months or more ).**
 
 **Hyphothesis is false**. The interest in buying the insurance is greater within the customers that spent more than 30k.
 
-![image](reports/figures/hypo_3.png)
+![image](reports/figures/hypo_03.png)
 
 **4. The interest on purchase the vehicle insurance is greater for young customers.(Between 18 and 30 years old.)**
 
 **Hyphotesis is true.** 12% of the customers that hold driving license shows interest in buying the vehicle insurance while only 5% of the customers that does not have driving license shows interest in acquire the insurance. 
 
-![image](reports/figures/hypo_4.png)
+![image](reports/figures/hypo_04.png)
 
 **5. The interest on purchase the vehicle insurance is greater for customers that have new cars.**
 
 **Hypothesis is false.** The interest is greater within customers that have old cars.
 
-![image](reports/figures/hypo_5.png)
+![image](reports/figures/hypo_05.png)
 
 # 4. Data Pre-Processing
 <p style="text-align: justify">Some machine learning models can perform with the data on the original form (categorical values, outliers, etc.), however it's performance won't be the best that it could. In order to standardize the data it will be applied some techniques that helps the machine learning algorithms to perform better.</p>
@@ -151,10 +140,10 @@ In relation to the categorial variables, the below techniques will be applied:
 
 - **Frequency Encoder**: Calculates the frequency of occurrence for each category of the feature and replaces the category value with the calculated frequency.
 
-# 6. Feature Selection
+# 5. Feature Selection
 <p style="text-align: justify">Depending on the business problem, volum of data and other factors, it is interesting to run a feature selection. Where a selected machine learning model is performed to calculate the importance of each feature for the machine learning performance. "How much does the feature helps to understand the phenomenon"? This results can be combined with exploratory data analysis and it is possible to select or exclude features that do not help and have lower influence on the machine learning performance. It helps to reduce the dimensionality of the data and the size of the model.</p>
 
-# 7. Machine Learning
+# 6. Machine Learning
 
 <p style="text-align: justify">Now, I am ready to explore the machine learning universe, where some of machine learning models have been evaluated, their performance have been compared each other and one of them have been selected to further advance the project. Their performance can be checked at the table below. The machine learning models will be evaluated with some metrics, however the most important one for this project is the recall, because I am interested in identify as much interested customers as possible. </p>
 
@@ -175,7 +164,7 @@ I am evaluating the machine learning models with some metrics:
 - **Lift Curve Chart**: It represents the machine learning performance in comparison to the baseline (standard process). Please, assess the project to have a better understanding of this chart.
 - **Confusion Matrix**: It shows the quantity of data classified correcly and wrong per class. Please, assess the project to have a better understanding of this chart.
 
-## 7.1 Machine Learning Fine Tuning
+## 6.1 Machine Learning Fine Tuning
 
 <p style="text-align: justify"> The fine tuning were performed by using a bysean method using optuna. And the choosen metric that will be considere is recall. 
 
@@ -195,14 +184,9 @@ To evaluate the XGB Classifier with the parameters tuned, I have concatenated th
 ![image](reports/figures/xgb_tuned.png)
 
 Analyzing the Cumulative Gain chart, it is possible to identify that XGB is capable of identifying 100% of the interested customers within around 50% of the data. Through the Lift Curve chart, its performance is 2.5 times better than the baseline (selecting customers randomly). From the confusion matrix, it is evident that XGB classified around 41,000 customers as interested; however, only approximately 9,300 are genuinely interested customers. This is a good result because these 9,300 represent 99% of the customers who have demonstrated interest in buying insurance during the interview.
-
-
-
-
 </p>
 
-
-## 7.2 - Business Problem Solution
+## 6.2 - Business Problem Solution
 
 <p style="text-align: justify"> The ultimate solution to this business problem is an API that can be accessed directly from Google Sheets. This solution was developed focusing in being user-friendly and it is a plugin for a tool that the users already are familiar with.
 
@@ -211,14 +195,14 @@ The functionality is illustrated in the image below, where users only need their
 ![image](reports/figures/google_sheet_automation.gif)
 
 
-# 8. Next Steps
+# 7. Next Steps
 As this was the first cycle, there are improvements to be considered in order to achieve the best performance.
 - Work on feature engineering, creating new features that could better explain the phenomenon.
 - Uses differents methods to transform the data.
 - Get more data and re-training the ML model.
 - Try to use others ML Models.
 
-# 9. Technologies
+# 8. Technologies
 
 [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
 [![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
@@ -232,5 +216,3 @@ As this was the first cycle, there are improvements to be considered in order to
 
 # AUTHOR
 Ricardo Perottoni
-
-###### All Rights Reserved - Comunidade DS 2022

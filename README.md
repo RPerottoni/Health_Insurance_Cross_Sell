@@ -8,7 +8,6 @@
 
 * [1. Business Scenario](#1-business-scenario)
 * [2. Solution Strategy](#2-solution-strategy)
-* [3. Data Filtering](#3-data-filtering)
 * [4. Hypothesis and Insights](#4-hyphotesis-and-insights)
 * [5. Machine Learning Models](#5-machine-learning-models)
 * [6. Machine Learning Performance](#6-machine-learning-performance)
@@ -18,128 +17,190 @@
 
 # 1. Business Scenario
 
-<p style="text-align: justify"> This study project was carried out with the aim of solving the business problem of Insurance All company, using machine learning algorithms and data science concepts to calculate the probability of a customer acquiring a new product from the company. In this way, the company can focus on customers with a higher interest in acquiring the new product, being more efficient in the use of its resources.
-
-Keeping in mind the accessibility of the user, the solution for this project was developed within Google Sheets, where the machine learning algorithm was connected to it, and with just one click, the user is able to obtain an ordered list, starting with the customer with the highest interest in acquiring the product.
-
-As a result of this project, Insurance All company was able to increase its profitability due to the significant reduction in the use of resources such as time and unnecessary calls.</p>
-
+<p style="text-align: justify"> The client is an Insurance company that has provided health insurance to its customers. Now they need our help in building a model to predict whether the policyholders (customers) from past year will also be interested in Vehicle Insurance provided by the company.
 
 ## 1.1 - Insurance All
 
-<p style="text-align: justify">Insurance All is a company that provides health insurance to its customers and the product team is analyzing the possibility of offering its insured a new product: A car insurance. 
-
-Aiming to reduce the customer acquisiton cost, the company decided to use a cross-sell strategy, that consist in selling a second product to an existing client.</p>
+<p style="text-align: justify">Insurance All is a company that provides health insurance to its customers and the product team analyzed the possibility of offering to its customers a new product: A car insurance. To conduct this analysis, the company interviewed approximatelly 380.000 customers about their interest in acquire the vehicle insurance. Afterwards, the company decided to lunch this product and the sales team will get in touch with some customers, that did not participate of this research, offering the new car insurance.
 
 ## 1.2 - Business Problems
 
-<p style="text-align: justify"> Insurance All conducted a survey with approximately 380,000 customers about their interest in joining a new car insurance product last year. All customers demonstrated interest or not in acquiring car insurance and these answers were saved in a database along with other customer attributes.
+<p style="text-align: justify"> The sales team received the mission of contact the customers, however they checked the database and there are approximatelly 127.000 new customers and the sales team does not have the resources to contact all of them, they have capacity to contact 20.000 people. Then, the question is: <b>How to select the 20.000 customers that are more likely in buying the vehicle insurance?</b>
 
-The product team selected 127,000 new customers who did not respond to the survey to participate in a campaign, in which they will receive the offer of the new car insurance product. The offer will be made by the sales team through phone calls. However, the sales team has a capacity to make 20,000 calls within the campaign period.
-
-In this context, you have been hired as a Data Science consultant to build a model that predicts if the customer would be interested or not in car insurance.
-
-With your solution, the sales team expects to prioritize people with higher interest in the new product and thus optimize the campaign by only contacting the customers most likely to make the purchase. </p>
+In this context, I have been hired as a Data Science consultant, aiming to develop a solution that will help the comercial team to contact the 20.000 customers more likely in buying the new product.
 
 # 2. Solution Strategy
 
-<p style="text-align: justify"> The solution follows the **CRISP-DM** (Cross-Industry Standard Process for Data Mining), which is a cyclic method of development. At the end of the first cycle, the team will have a first version end-to-end of this solution, allowing them to achieve good results faster, identify and address potential problems effectively. </p>
+<p style="text-align: justify"> The solution will be developed based on the <b>CRISP-DM</b> (Cross-Industry Standard Process for Data Mining), which is a cyclic method of development. At the end of the first cycle, the team will have a first version end-to-end of this solution, allowing them to achieve good results faster, identify and address potential problems effectively. </p>
 
 ![image](reports/figures/crispds_one.jpg)
 
+Below, I will comment the steps that I have done in order to develop the project
 
-**Step 01. Data Description:** My goal is to use statistics metrics to identify data outside the scope of business.
+### 2.1 - **Business Problem**
+<p>Before to start with the hands on the programmin, it is important to understant the business problem and align the objective and what is expected as a solution.
 
-**Step 02. Feature Engineering:** Derive new attributes based on the original variables to better describe the phenomenon that will be modeled.
+As previously mentioned, the aim of this project is to generate a sorted list from the more likely customer to purchase the product to the customer less likely to buy it. Then, I am going to have two different datasets, one that will be used to develop the solution, that contains the data from the interview and the other one that contains the customers that woul be contacted.
 
-**Step 03. Data Filtering:** Filter rows and select columns that do not contain information for modeling or that do not match the scope of the business.
+The project resolution follows the steps below.
 
-**Step 04. Exploratory Data Analysis:** Explore the data to find insights and better understand the impact of variables on model learning.
+</p>
 
-**Step 05. Data Preparation:** Prepare the data so that the Machine Learning models can learn the specific behavior.
+### 2.2 - **Data Extraction and Data Cleaning**
+<p>Collecting, uploading, accessing the data to be used to solve the business questions. And runing an initial check on the datas to identify:
 
-**Step 06. Feature Selection:** Selection of the most significant attributes for training the model.
+* Number of Rows
+* Number of Columns
+* Data Types
+* NaN Values
+* Statistic Analysis (Central tendency, dispersion, etc.) 
+* Split the dataset into train, validation and test dataset, avoiding data leakage during the machine learning training process
 
-**Step 07. Machine Learning Modelling:** Machine Learning model training.
+</p>
 
-**Step 08. Hyperparameter Fine Tunning:** Choose the best values for each of the parameters of the model selected from the previous step.
+### 2.3 - **Exploratory Data Analysis:** 
+<p>On this phase tree types of analysis are made:
 
-**Step 09. Convert Model Performance to Business Values:** Convert the performance of the Machine Learning model into a business result.
+* **Univariate Analysis:** To understand the distribution of each feature, if there are outliers, if it is a normal distribution, etc.
+* **Bivariate Analysis:** Where some business hyphotesis are made and validate
+* **Multivariate Analysis:** Correlation analysis among all features.
+</p>
 
-**Step 10. Deploy Modelo to Production:** Publish the model in a cloud environment so that other people or services can use the results to improve the business decision.
+### 2.4 - **Data Modeling and Feature Engineering:**
+<p>
+Feature engineering consists in derivate/modify (new) features from the existing ones, aiming to find something that can help to better explain the phenomenon of study.
 
-# 3. Data Filtering
-Filters are not applied on this project.
+Modeling consists in work with the datas aiming to adjust them according the machine learning principles. Below, are some exemples about what are done in this phase:
 
-# 4. Hypothesis and Insights
+* Handling with missing values (NaN): fill, remove, filter, etc.
+* Encoding: change from categorical to numerical
+* Scaling and Normalization: ensure the numerical variables are on a similar scale.
+* Dimensionality Reduction: Applying techniques like Principal Component Analysis (PCA) to reduce the number of features while preserving as much information as possible.
+* Feature Engineering: Iteratively selecting and refining features based on their importance or relevance to the problem.
 
-**1. The interest on purchase the vehicle insurance is greater for customers that damaged their vehicle before and doesn't have insurance.**
-    False, of the customers that damaged their car and doesn't have insurance, only 25% show interest in acquire vehicle insurance.
+</p>
+
+### 2.5 - **Machine Learning Modelling:**
+<p>
+
+**Model Selection:** Choose appropriate machine learning algorithms based on the nature of the problem and data.
+
+**Training and Evaluation:** Train models on the training set and evaluate their performance using the testing set.
+
+**Hyperparameter Tuning:** Fine-tune model hyperparameters to optimize performance. This involves adjusting parameters that are not learned from the training data, such as learning rates or regularization terms.
+
+</p>
+
+### 2.6 - **Evaluation**
+<p>
+The evaluation phase involves analyzing the performance of the machine learning model to determine whether it meets the established criteria and is satisfactory for further advancement in the project. During this step, the chosen performance metrics are compared with the actual process or results.
+
+</p>
+
+### 2.7- **Deployment** 
+Publish the model in a cloud environment so that other people or services can use the results to improve the business decision.
+
+
+# 3. Business Hypothesis and Insights
+
+<p> On this step, I will share the business hyphotesis that have been validated during the project development. This could guide and generate some insights that could be usefull and applicable even before the first version of the project be ready. </p>
+
+**1. Taking into account customers who have previously had their cars damaged and have not had insurance before, the majority of them are interested in acquiring insurance. The result can provide insights for the company where it can create programs to attract one or more customer profiles.**
+
+**Hypothesis False**. 75% of the customers does not have interest in buying the vehicle insurance.
 
 ![image](reports/figures/hypo_1.png)
 
 **2. The interest on purchase the vehicle insurance is greater for woman than men.**
-   False, only 10% of women show interest in acquire vehicle insurance, whereas 13% of the men show interest on acquire vehicle insurance.
+
+**Hypothesis is false**. Only 10% of women express interest in buying vehicle insurance, compared to 14% of men.
 
 ![image](reports/figures/hypo_2.png)
 
 **3. The interest on purchase vehicle insurance is greater for vintage customers ( 7 months or more ).**
-    False, the period that customers are on the company doensn't show influency on interest in buying vehicle insurance.
+
+**Hyphothesis is false**. The interest in buying the insurance is greater within the customers that spent more than 30k.
 
 ![image](reports/figures/hypo_3.png)
 
 **4. The interest on purchase the vehicle insurance is greater for young customers.(Between 18 and 30 years old.)**
-    False, customers that spend more than 30k yearly show greter interest on purchase vehicle insurance.
+
+**Hyphotesis is true.** 12% of the customers that hold driving license shows interest in buying the vehicle insurance while only 5% of the customers that does not have driving license shows interest in acquire the insurance. 
 
 ![image](reports/figures/hypo_4.png)
 
-**5. The interest on purchase the vehicle insurance is greater for young customers.(Between 18 and 30 years old.)**
-    False, adults and elderlies show greater interest on buying vehicle insurance.
+**5. The interest on purchase the vehicle insurance is greater for customers that have new cars.**
+
+**Hypothesis is false.** The interest is greater within customers that have old cars.
+
 ![image](reports/figures/hypo_5.png)
 
+# 4. Data Pre-Processing
+<p style="text-align: justify">Some machine learning models can perform with the data on the original form (categorical values, outliers, etc.), however it's performance won't be the best that it could. In order to standardize the data it will be applied some techniques that helps the machine learning algorithms to perform better.</p>
 
-# 5. Machine Learning Models
-<p style="text-align: justify">In this phase, three different machine learning algorithms were selected for training and evaluation. The algorithms and the evaluated metrics are listed in the table below </p>
+For the numercial variables, the below techniques will be applied:
 
-| ML Model                | Precision @K            | Recall @K              |
-|:------------------------|:------------------------|:-----------------------|
-| Logistic Regression     | 0.2538    +/- 0.0012    | 0.9041   +/- 0.0042    | 
-| XGB                     | 0.2670    +/- 0.0007    | 0.9511   +/- 0.0024    |
-| KNN                     | 0.2211    +/2 0.0005    | 0.7875   +/2 0.0018    |
+- **Min. Max Scaler**: This will be applied on features that does not follow a normal distribution and does not have outliers;
 
-To further advance the project, hyperparameter fine-tuning was performed on the LGBM (LightGBM) and XGBoost models using a bysean search algorithm.
+- **Robust Scaller**: This will be applied on features that contains very high / very low values (outliers)
 
-# 6. Machine Learning Performance
 
-<p style="text-align: justify"> In this step, we selected the XGB Classifier algorithm to be performed with tuned paramenters. We evaluated their performance using the test dataset, which simulates real data, aiming to analyze the performance closely as if it is in production. </p>
+In relation to the categorial variables, the below techniques will be applied:
 
-The performance for XGB can be checked bellow:
-| ML Model                | Precision @20.000       | Recall @20.000       |
-|:------------------------|:------------------------|:---------------------|
-| XGB                     | 0.3111                  | 0.8334               |
+- **Target Encoder**: Calculates the mean value of the target variable for each category of the feature and replaces the category value with the calculated mean.
 
-<p style="text-align: justify"> Besides of recall and precision metrics, for a Learn to Rank problem is a good practrice to analyze the Cumulative Gain and Lift Curve chart, that helps to have a easy understanding about the model performance. </p>
+- **Frequency Encoder**: Calculates the frequency of occurrence for each category of the feature and replaces the category value with the calculated frequency.
 
-![image](reports/figures/xgb_final.png)
+# 6. Feature Selection
+<p style="text-align: justify">Depending on the business problem, volum of data and other factors, it is interesting to run a feature selection. Where a selected machine learning model is performed to calculate the importance of each feature for the machine learning performance. "How much does the feature helps to understand the phenomenon"? This results can be combined with exploratory data analysis and it is possible to select or exclude features that do not help and have lower influence on the machine learning performance. It helps to reduce the dimensionality of the data and the size of the model.</p>
 
-<p style="text-align: justify"> Firstly, we evaluated the metrics using a dataset of 20,000 records, which makes up about 27% of the total dataset.
+# 7. Machine Learning
 
-By examining the Cumulative Gain chart, we can observe that if we were to reach out to approximately 20,000 clients (which represents around 27% of the total), we would be able to successfully contact 80% of the interested customers. 
+<p style="text-align: justify">Now, I am ready to explore the machine learning universe, where some of machine learning models have been evaluated, their performance have been compared each other and one of them have been selected to further advance the project. Their performance can be checked at the table below. The machine learning models will be evaluated with some metrics, however the most important one for this project is the recall, because I am interested in identify as much interested customers as possible. </p>
 
-Discussing the lift curve chart, we can see that our model performs approximately three times better than the random selection process, for 27% of the data (20.000 clients). </p>
+| ML Model                | Precision @K         | Recall @K              |
+|:------------------------|:-------------------- |:-----------------------|
+| Logistic Regression     | 0.24966              | 0.978912               | 
+| XGB Classifier          | 0.278177             | 0.931813               |
+| KNN                     | 0.32056              | 0.200385               |
+| CatBoost Classifier     | 0.269406             | 0.958146               | 
+| LGBM Classifier         | 0.26826              | 0.957611               |
+| ExtraTrees Classifier   | 0.340441             | 0.153821               |
 
-# 7. Business Results
+I am evaluating the machine learning models with some metrics:
 
-## 7.1 - Business Questions
+- **Precision**: It measuers the proportion of correct predictions in relation the total of predictions made.
+- **Recall**: It measures the proportion of correct predictions in relation to the number of data available for the class of interest.
+- **Cumulative Gain Chart**: It shows the percentage of labels identified in relation to the percentage of sample. Please, assess the project to have a better understanding of this chart.
+- **Lift Curve Chart**: It represents the machine learning performance in comparison to the baseline (standard process). Please, assess the project to have a better understanding of this chart.
+- **Confusion Matrix**: It shows the quantity of data classified correcly and wrong per class. Please, assess the project to have a better understanding of this chart.
 
-#### 1 - What percentage of customers interested in purchasing car insurance will the sales team be able to contact by making 20,000 calls?
->By doing 20.000 calls, wich represents 26% of the total of data, the sales team will make contact with 72% of the interested customers.
+## 7.1 Machine Learning Fine Tuning
 
-#### 2 - If the sales team's capacity increases to 40,000 calls, what percentage of customers interested in purchasing car insurance will the sales team be able to contact?
->By doing 40.000 calls, the sales team will make contact with 99.4% of the interested customers.
+<p style="text-align: justify"> The fine tuning were performed by using a bysean method using optuna. And the choosen metric that will be considere is recall. 
 
-#### 3 - How many calls does the sales team need to make to contact 80% of customers interested in purchasing car insurance?
->By doing 23500 calls, the sales team will make contact with 80% of the interested customers.
+| ML Model                | Recall @K            |           
+|:------------------------|:-------------------- |
+| Logistic Regression     | 0.9789               |
+| XGB Classifier          | 0.9994               |
+| CatBoost Classifier     | 0.9822               | 
+
+After the fine tuning, I have decided to further advance with the XGB Classifier, and it's performance will be explained below.
+
+To evaluate the XGB Classifier with the parameters tuned, I have concatenated the train and validation dataset and the performance was calculated on the test dataset. 
+| ML Model                | Recall @K            |           
+|:------------------------|:-------------------- |
+| XGB Classifier          | 0.991865             |
+
+![image](reports/figures/xgb_tuned.png)
+
+Analyzing the Cumulative Gain chart, it is possible to identify that XGB is capable of identifying 100% of the interested customers within around 50% of the data. Through the Lift Curve chart, its performance is 2.5 times better than the baseline (selecting customers randomly). From the confusion matrix, it is evident that XGB classified around 41,000 customers as interested; however, only approximately 9,300 are genuinely interested customers. This is a good result because these 9,300 represent 99% of the customers who have demonstrated interest in buying insurance during the interview.
+
+
+
+
+</p>
+
 
 ## 7.2 - Business Problem Solution
 

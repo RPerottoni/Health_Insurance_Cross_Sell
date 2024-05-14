@@ -182,13 +182,15 @@ To evaluate the XGB Classifier with the parameters tuned, I have concatenated th
 | XGB Classifier          | 0.991865             |
 
 ![image](reports/figures/xgb_tuned.png)
+<p style="text-align: justify"> Analyzing the Cumulative Gain chart, it is possible to identify that XGB is capable of identifying 100% of the interested customers within around 50% of the data. Through the Lift Curve chart, its performance is 2.5 times better than the baseline (selecting customers randomly). From the confusion matrix, it is evident that XGB classified around 41,000 customers as interested; however, only approximately 9,300 are genuinely interested customers. This is a good result because these 9,300 represent 99% of the customers who have demonstrated interest in buying insurance during the interview. And with these information, it is easy to convert into financial values.</p>
 
-Analyzing the Cumulative Gain chart, it is possible to identify that XGB is capable of identifying 100% of the interested customers within around 50% of the data. Through the Lift Curve chart, its performance is 2.5 times better than the baseline (selecting customers randomly). From the confusion matrix, it is evident that XGB classified around 41,000 customers as interested; however, only approximately 9,300 are genuinely interested customers. This is a good result because these 9,300 represent 99% of the customers who have demonstrated interest in buying insurance during the interview.
-</p>
+<p style="text-align: justify">Well, it was possible to develop a solution locally on my computer and with a good performance, however I need to think in a way to deliver it to the comercial team, to the people that will use it, so the final solution will be explained on the next topic.</p>
 
 ## 6.2 - Business Problem Solution
 
-<p style="text-align: justify"> The ultimate solution to this business problem is an API that can be accessed directly from Google Sheets. This solution was developed focusing in being user-friendly and it is a plugin for a tool that the users already are familiar with.
+<p style="text-align: justify">Okay, the project was developed and it is working providing a good result, however, it must be acessible by the people that are in need of the information.
+
+Thinking in a way that would be easier for them to use it, I have deployed the machine learning model on a cloud environment and I have developed a plug-in for google sheet, which will access the API, and the result will be loaded into the google sheet itself. Making the process quicker, easier and acessible.
 
 The functionality is illustrated in the image below, where users only need their Google Sheets containing the customer data they want to classify. With just a few clicks, they can obtain a sorted list of customers, starting with the most likely to purchase the product and ending with the least likely. </p>
 
